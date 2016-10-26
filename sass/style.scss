@@ -3,6 +3,89 @@
 @import "compass/utilities/";
 @import "font-awesome";
 
+$bg-color: #f2eee8;
+$post-bg-color: #fffbf5;
+$body-color: #f3efe9;
+$grey-text-color: gray;
+$text-color: black;
+
 body {
 	font-size: 62.5%;
+	background: $bg-color;
+}
+
+.post {
+	width: 75em;
+	margin: 0 auto;
+
+	position: relative;
+	text-align: left;
+	padding: 2em;
+	background: $post-bg-color;
+	border-bottom: 1px solid $body-color;
+
+	.avatar {
+		width: 3em;
+		height: 3em;
+		@include border-radius(100%);
+		position: absolute;
+		top: 2em;
+		left: 2em;
+	}
+
+	.content {
+		margin-left: 4em;
+		margin-bottom: 1em;
+
+		header {
+			margin-bottom: 1em;
+
+			span {
+				margin-right: 1em;
+
+				&.name {
+					font-weight: bold;
+				}
+
+				&.account {
+					font-weight: lighter;
+					color: $grey-text-color;
+				}
+
+				&.time {
+					color: $grey-text-color;
+					float: right;
+					margin-right: 0;
+				}
+			}
+		}
+
+		p {
+			line-height: 1.4;
+			font-weight: normal;
+			margin-bottom: 1em;
+		}
+
+		img {
+			width: 100%;
+			margin-bottom: 1em;
+		}
+
+		footer {
+			a {
+				text-decoration: none;
+				color: $grey-text-color;
+				margin-right: 1em;
+
+				&:last-child {
+					float: right;
+					margin-right: 0;
+				}
+
+				&:hover {
+					color: $text-color
+				}
+			}
+		}
+	}
 }
