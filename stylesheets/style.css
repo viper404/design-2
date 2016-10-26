@@ -3595,7 +3595,84 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   clip: auto;
 }
 
-/* line 6, ../sass/style.scss */
+/* line 12, ../sass/style.scss */
 body {
   font-size: 62.5%;
+  background: #f2eee8;
+}
+
+/* line 17, ../sass/style.scss */
+.post {
+  width: 75em;
+  margin: 0 auto;
+  position: relative;
+  text-align: left;
+  padding: 2em;
+  background: #fffbf5;
+  border-bottom: 1px solid #f3efe9;
+}
+/* line 27, ../sass/style.scss */
+.post .avatar {
+  width: 3em;
+  height: 3em;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  position: absolute;
+  top: 2em;
+  left: 2em;
+}
+/* line 36, ../sass/style.scss */
+.post .content {
+  margin-left: 4em;
+  margin-bottom: 1em;
+}
+/* line 40, ../sass/style.scss */
+.post .content header {
+  margin-bottom: 1em;
+}
+/* line 43, ../sass/style.scss */
+.post .content header span {
+  margin-right: 1em;
+}
+/* line 46, ../sass/style.scss */
+.post .content header span.name {
+  font-weight: bold;
+}
+/* line 50, ../sass/style.scss */
+.post .content header span.account {
+  font-weight: lighter;
+  color: gray;
+}
+/* line 55, ../sass/style.scss */
+.post .content header span.time {
+  color: gray;
+  float: right;
+  margin-right: 0;
+}
+/* line 63, ../sass/style.scss */
+.post .content p {
+  line-height: 1.4;
+  font-weight: normal;
+  margin-bottom: 1em;
+}
+/* line 69, ../sass/style.scss */
+.post .content img {
+  width: 100%;
+  margin-bottom: 1em;
+}
+/* line 75, ../sass/style.scss */
+.post .content footer a {
+  text-decoration: none;
+  color: gray;
+  margin-right: 1em;
+}
+/* line 80, ../sass/style.scss */
+.post .content footer a:last-child {
+  float: right;
+  margin-right: 0;
+}
+/* line 85, ../sass/style.scss */
+.post .content footer a:hover {
+  color: black;
 }
