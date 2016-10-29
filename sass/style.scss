@@ -8,11 +8,44 @@ $post-bg-color: #fffbf5;
 $body-color: #f3efe9;
 $grey-text-color: gray;
 $text-color: black;
+$twitter-color: #80a8cc;
 
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 62.5%;
 	background: $bg-color;
+}
+
+.numbers {
+	width: 79em;
+	margin: 2em auto;
+	background: $post-bg-color;
+
+	li {
+		float: left;
+		width: 25%;
+		box-sizing: border-box;
+		padding: 1.5em 3em;
+		border-bottom: 3px solid transparent;
+		transition: all .3s ease-in;
+		text-align: center;
+
+		h4 {
+			text-transform: uppercase;
+			color: $grey-text-color;
+		}
+
+		p {
+			margin-top: 1em;
+			font-weight: bold;
+		}
+
+		&:hover {
+			border-bottom: 3px solid $twitter-color;
+		}
+	}
+
+	@include clearfix;
 }
 
 .post {
