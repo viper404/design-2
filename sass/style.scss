@@ -10,6 +10,21 @@ $grey-text-color: gray;
 $text-color: black;
 $twitter-color: #80a8cc;
 
+$break-small: 320px;
+$break-large: 1024px;
+
+@mixin respond-to($media) {
+	@if $media == handhelds {
+		@media only screen and (max-width: $break-small) {@content;}
+	}
+	@else if $media == medium-screens {
+		@media only screen and (min-width: $break-small + 1px) and (max-width: $break-large - 1px) {@content;}
+	}
+	@else if $media == wide-screens {
+		@media only screen and (min-width: $break-large) {@content;}
+	}
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 62.5%;
@@ -29,6 +44,14 @@ body {
 		border-bottom: 3px solid transparent;
 		transition: all .3s ease-in;
 		text-align: center;
+
+		@include respond-to(medium-screens) {
+			width: 50%;
+		}
+		@include respond-to(handhelds) {
+			float: none;
+			width: 100%;
+		}
 
 		h4 {
 			text-transform: uppercase;
